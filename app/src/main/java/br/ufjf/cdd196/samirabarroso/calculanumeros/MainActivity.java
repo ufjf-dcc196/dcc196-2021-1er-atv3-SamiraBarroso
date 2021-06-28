@@ -16,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextNumero2;
     private TextView textViewResultado;
     private Button buttonSoma;
+    private Button buttonSub;
+    private Button buttonMult;
+    private Button buttonDiv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         editTextNumero2 = findViewById(R.id.editTextNumero2);
         textViewResultado = findViewById(R.id.textViewResultado);
         buttonSoma = findViewById(R.id.buttonSoma);
+        buttonSub = findViewById(R.id.buttonSub);
+        buttonMult = findViewById(R.id.buttonMult);
+        buttonDiv = findViewById(R.id.buttonDiv);
 
         buttonSoma.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +52,27 @@ public class MainActivity extends AppCompatActivity {
                 editTextNumero1.setText("");
                 editTextNumero2.setText("");
 
+            }
+        });
+
+        buttonSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int x = 0;
+                int y = 0;
+                int resultado = 0;
+
+                try {
+                    x = Integer.parseInt(editTextNumero1.getText().toString());
+                    y = Integer.parseInt(editTextNumero2.getText().toString());
+                    resultado = x - y;
+
+                }catch (Exception e){
+
+                }
+                textViewResultado.setText(Integer.toString(resultado));
+                editTextNumero1.setText("");
+                editTextNumero2.setText("");
             }
         });
 
