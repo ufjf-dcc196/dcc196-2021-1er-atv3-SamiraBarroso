@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonMult;
     private Button buttonDiv;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
         buttonSoma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int x = 0;
-                int y = 0;
+                int x ;
+                int y ;
                 int resultado = 0;
 
                 try {
@@ -58,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
         buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int x = 0;
-                int y = 0;
+                int x ;
+                int y ;
                 int resultado = 0;
 
                 try {
@@ -73,6 +74,56 @@ public class MainActivity extends AppCompatActivity {
                 textViewResultado.setText(Integer.toString(resultado));
                 editTextNumero1.setText("");
                 editTextNumero2.setText("");
+            }
+        });
+
+        buttonMult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int x ;
+                int y ;
+                int resultado = 0;
+
+                try {
+                    x = Integer.parseInt(editTextNumero1.getText().toString());
+                    y = Integer.parseInt(editTextNumero2.getText().toString());
+                    resultado = x * y;
+
+                }catch (Exception e){
+
+                }
+                textViewResultado.setText(Integer.toString(resultado));
+                editTextNumero1.setText("");
+                editTextNumero2.setText("");
+            }
+        });
+
+        buttonDiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int x ;
+                int y ;
+                int resultado = 0;
+
+                try {
+                    x = Integer.parseInt(editTextNumero1.getText().toString());
+                    y = Integer.parseInt(editTextNumero2.getText().toString());
+
+                    if(y == 0 ){
+                        throw new Exception("Nao é permitido fazer uma divisão por zero!");
+                    }
+
+                    resultado = x / y;
+                    textViewResultado.setText(Integer.toString(resultado));
+
+                }catch (Exception e){
+                    textViewResultado.setText(e.getMessage());
+                }
+
+               // textViewResultado.setText(Integer.toString(resultado));
+                editTextNumero1.setText("");
+                editTextNumero2.setText("");
+
             }
         });
 
