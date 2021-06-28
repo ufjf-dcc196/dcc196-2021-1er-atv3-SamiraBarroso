@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonMult;
     private Button buttonDiv;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,19 +36,19 @@ public class MainActivity extends AppCompatActivity {
         buttonSoma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int x ;
-                int y ;
-                int resultado = 0;
+                Double x;
+                Double y;
+                Double resultado = 0.0;
 
                 try {
-                    x = Integer.parseInt(editTextNumero1.getText().toString());
-                    y = Integer.parseInt(editTextNumero2.getText().toString());
+                    x = Double.parseDouble(editTextNumero1.getText().toString());
+                    y = Double.parseDouble(editTextNumero2.getText().toString());
                     resultado = x + y;
 
                 }catch (Exception e){
 
                 }
-                textViewResultado.setText(Integer.toString(resultado));
+                textViewResultado.setText(String.valueOf(resultado));
                 editTextNumero1.setText("");
                 editTextNumero2.setText("");
 
@@ -59,19 +58,19 @@ public class MainActivity extends AppCompatActivity {
         buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int x ;
-                int y ;
-                int resultado = 0;
+                Double x ;
+                Double y ;
+                Double resultado = 0.0;
 
                 try {
-                    x = Integer.parseInt(editTextNumero1.getText().toString());
-                    y = Integer.parseInt(editTextNumero2.getText().toString());
+                    x = Double.parseDouble(editTextNumero1.getText().toString());
+                    y = Double.parseDouble(editTextNumero2.getText().toString());
                     resultado = x - y;
 
                 }catch (Exception e){
 
                 }
-                textViewResultado.setText(Integer.toString(resultado));
+                textViewResultado.setText(String.valueOf(resultado));
                 editTextNumero1.setText("");
                 editTextNumero2.setText("");
             }
@@ -80,19 +79,19 @@ public class MainActivity extends AppCompatActivity {
         buttonMult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int x ;
-                int y ;
-                int resultado = 0;
+                Double x ;
+                Double y ;
+                Double resultado = 0.0;
 
                 try {
-                    x = Integer.parseInt(editTextNumero1.getText().toString());
-                    y = Integer.parseInt(editTextNumero2.getText().toString());
+                    x = Double.parseDouble(editTextNumero1.getText().toString());
+                    y = Double.parseDouble(editTextNumero2.getText().toString());
                     resultado = x * y;
 
                 }catch (Exception e){
 
                 }
-                textViewResultado.setText(Integer.toString(resultado));
+                textViewResultado.setText(String.valueOf(resultado));
                 editTextNumero1.setText("");
                 editTextNumero2.setText("");
             }
@@ -101,20 +100,20 @@ public class MainActivity extends AppCompatActivity {
         buttonDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int x ;
-                int y ;
-                int resultado = 0;
+                Double x ;
+                Double y ;
+                Double resultado = 0.0;
 
                 try {
-                    x = Integer.parseInt(editTextNumero1.getText().toString());
-                    y = Integer.parseInt(editTextNumero2.getText().toString());
+                    x = Double.parseDouble(editTextNumero1.getText().toString());
+                    y = Double.parseDouble(editTextNumero2.getText().toString());
 
                     if(y == 0 ){
                         throw new Exception("Nao é permitido fazer uma divisão por zero!");
                     }
 
                     resultado = x / y;
-                    textViewResultado.setText(Integer.toString(resultado));
+                    textViewResultado.setText(String.valueOf(resultado));
 
                 }catch (Exception e){
                     textViewResultado.setText(e.getMessage());
