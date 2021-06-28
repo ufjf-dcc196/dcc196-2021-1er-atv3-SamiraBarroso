@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 textViewResultado.setText(Integer.toString(resultado));
                 editTextNumero1.setText("");
                 editTextNumero2.setText("");
+
             }
         });
 

@@ -74,13 +74,62 @@
 
     <Button
         android:id="@+id/buttonSoma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="64dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
         android:layout_marginTop="16dp"
         android:text="Somar"
+        android:textSize="8sp"
         app:backgroundTint="#E91E63"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumero2" />
+
+    <Button
+        android:id="@+id/buttonSoma2"
+        android:layout_width="80dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Subtrair"
+        android:textSize="8sp"
+        app:backgroundTint="#E91E63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonSoma"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumero2" />
+
+    <Button
+        android:id="@+id/buttonSoma5"
+        android:layout_width="90dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Multiplicar"
+        android:textSize="8sp"
+        app:backgroundTint="#E91E63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonSoma2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumero2" />
+
+    <Button
+        android:id="@+id/buttonSoma6"
+        android:layout_width="86dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Dividir"
+        android:textSize="8sp"
+        app:backgroundTint="#E91E63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonSoma5"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumero2" />
 
     <TextView
